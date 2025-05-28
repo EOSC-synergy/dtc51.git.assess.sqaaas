@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/dtgeo.wp5dtc1/dtc51:
+      branch: ST510102
+      repo: https://gitlab.com/dtgeo.wp5dtc1/dtc51.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-amaranth-salamander.sh
+        container: qc.acc_breezy-firebrick-scorpion
+  QC.Doc:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-white-scorpion.sh
+        container: qc.doc_messy-turquoise-bat
+      gitlab.com/dtgeo.wp5dtc1/dtc51 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-dandelion-ladybird.sh
+        container: qc.doc_wheezy-burgundy-bee
+  QC.Lic:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-periwinkle-chicken.sh
+        container: qc.lic_homely-lemon-spaniel
+  QC.Ver:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-orange-snake.sh
+        container: qc.ver_snappy-celadon-booby
+timeout: 5400
