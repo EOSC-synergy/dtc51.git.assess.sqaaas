@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/dtgeo.wp5dtc1/dtc51:
+      branch: ST510101
+      repo: https://gitlab.com/dtgeo.wp5dtc1/dtc51.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-carmine-meerkat.sh
+        container: qc.acc_snippy-magnolia-slug
+  QC.Doc:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-cobalt-bee.sh
+        container: qc.doc_dorky-ruby-gharial
+      gitlab.com/dtgeo.wp5dtc1/dtc51 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-chartreuse-cichlid.sh
+        container: qc.doc_geeky-gamboge-robin
+  QC.Lic:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-chartreuse-cichlid.sh
+        container: qc.lic_surly-russet-lynx
+  QC.Sec:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-zucchini-fowl.sh
+        container: qc.sec_bluesy-corn-termite
+  QC.Sty:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-maroon-bullfrog.sh
+        container: qc.sty_nippy-coral-chameleon
+      gitlab.com/dtgeo.wp5dtc1/dtc51 jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-magenta-grasshopper.sh
+        container: qc.sty_beady-ivory-turtle
+  QC.Uni:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-bronze-armadillo.sh
+        container: qc.uni_fuzzy-persimmon-hedgehog
+  QC.Ver:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-tangerine-antelope.sh
+        container: qc.ver_hilly-magenta-ocelot
+timeout: 5400
