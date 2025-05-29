@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 git:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-saffron-scorpion.sh
-        container: qc.acc_scaly-aqua-rottweiler
+        - /usr/bin/env sh .sqa/script.beady-cerulean-jackal.sh
+        container: qc.acc_thirsty-xanthic-chameleon
   QC.Doc:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-persimmon-tuatara.sh
-        container: qc.doc_hilly-russet-spider
+        - /usr/bin/env sh .sqa/script.cozy-copper-owl.sh
+        container: qc.doc_sickly-lilac-millipede
       gitlab.com/dtgeo.wp5dtc1/dtc51 git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-red-grasshopper.sh
-        container: qc.doc_sleazy-magnolia-capuchin
+        - /usr/bin/env sh .sqa/script.gamy-sepia-abyssinian.sh
+        container: qc.doc_tacky-green-seal
       gitlab.com/dtgeo.wp5dtc1/dtc51 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-cerise-dodo.sh
-        container: qc.doc_surly-mauve-flounder
+        - /usr/bin/env sh .sqa/script.foggy-ivory-spider.sh
+        container: qc.doc_greasy-myrtle-fly
   QC.Lic:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-viridian-mole.sh
-        container: qc.lic_snappy-seashell-dormouse
+        - /usr/bin/env sh .sqa/script.ugly-gold-dalmatian.sh
+        container: qc.lic_blurry-goldenrod-budgerigar
   QC.Sec:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-corn-penguin.sh
-        container: qc.sec_sleazy-seashell-booby
+        - /usr/bin/env sh .sqa/script.pasty-cinnabar-bat.sh
+        container: qc.sec_squeaky-white-burmese
   QC.Sty:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-wheat-coyote.sh
-        container: qc.sty_randy-ivory-chihuahua
+        - /usr/bin/env sh .sqa/script.craggy-salmon-crane.sh
+        container: qc.sty_blurry-lemon-dormouse
       gitlab.com/dtgeo.wp5dtc1/dtc51 jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-crimson-tzu.sh
-        container: qc.sty_pokey-emerald-peccary
+        - /usr/bin/env sh .sqa/script.cloudy-xanthic-rhinoceros.sh
+        container: qc.sty_gimpy-turquoise-audemer
   QC.Uni:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-blue-frise.sh
-        container: qc.uni_scummy-olivine-elephant
+        - /usr/bin/env sh .sqa/script.shabby-bistre-shrimp.sh
+        container: qc.uni_sickly-saffron-wasp
   QC.Ver:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-alizarin-mau.sh
-        container: qc.ver_crappy-chestnut-fish
+        - /usr/bin/env sh .sqa/script.hazy-lavender-pig.sh
+        container: qc.ver_homely-wisteria-robin
 timeout: 5400
