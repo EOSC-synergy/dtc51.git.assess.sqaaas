@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     gitlab.com/dtgeo.wp5dtc1/dtc51:
-      branch: ST510103
+      branch: ST510107
       repo: https://gitlab.com/dtgeo.wp5dtc1/dtc51.git
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,54 +15,50 @@ sqa_criteria:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-harlequin-fox.sh
-        container: qc.acc_whiny-sepia-sponge
+        - /usr/bin/env sh .sqa/script.lousy-bronze-avocet.sh
+        container: qc.acc_snazzy-lilac-ostrich
   QC.Doc:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-bistre-dane.sh
-        container: qc.doc_bumpy-zucchini-leopard
+        - /usr/bin/env sh .sqa/script.surly-orchid-uguisu.sh
+        container: qc.doc_squeaky-xanthic-panda
       gitlab.com/dtgeo.wp5dtc1/dtc51 git:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-thistle-meerkat.sh
-        container: qc.doc_greasy-cobalt-discus
-      gitlab.com/dtgeo.wp5dtc1/dtc51 markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.muzzy-wisteria-walrus.sh
-        container: qc.doc_slimy-denim-foxhound
+        - /usr/bin/env sh .sqa/script.queasy-yellow-mole.sh
+        container: qc.doc_zippy-goldenrod-coyote
   QC.Lic:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-cerulean-frog.sh
-        container: qc.lic_skimpy-brass-beetle
+        - /usr/bin/env sh .sqa/script.foggy-teal-heron.sh
+        container: qc.lic_seedy-peach-indri
   QC.Sec:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-turquoise-bracke.sh
-        container: qc.sec_wheezy-thistle-labradoodle
+        - /usr/bin/env sh .sqa/script.flabby-tangerine-dragonfly.sh
+        container: qc.sec_leaky-linen-markhor
   QC.Sty:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-xanthic-spoonbill.sh
-        container: qc.sty_jumpy-cobalt-mongoose
-      gitlab.com/dtgeo.wp5dtc1/dtc51 oclint:
+        - /usr/bin/env sh .sqa/script.stealthy-razzmatazz-numbat.sh
+        container: qc.sty_paltry-khaki-goose
+      gitlab.com/dtgeo.wp5dtc1/dtc51 jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-cinnamon-mastiff.sh
-        container: qc.sty_sloppy-dandelion-centipede
+        - /usr/bin/env sh .sqa/script.thirsty-firebrick-cow.sh
+        container: qc.sty_scanty-harlequin-clam
   QC.Uni:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-cinnamon-fowl.sh
-        container: qc.uni_surly-peach-gorilla
+        - /usr/bin/env sh .sqa/script.thirsty-tomato-corgi.sh
+        container: qc.uni_hazy-asparagus-peccary
   QC.Ver:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-thistle-deer.sh
-        container: qc.ver_craggy-scarlet-chihuahua
+        - /usr/bin/env sh .sqa/script.snazzy-beige-numbat.sh
+        container: qc.ver_stealthy-magnolia-heron
 timeout: 5400
